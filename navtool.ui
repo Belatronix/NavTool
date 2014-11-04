@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="windowModality">
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>602</width>
+    <height>197</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>NavTool</string>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>602</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDatei">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="action_ffnen"/>
+    <addaction name="actionSpeichern"/>
+    <addaction name="separator"/>
+    <addaction name="actionBeenden"/>
+   </widget>
+   <widget class="QMenu" name="menuAnsicht">
+    <property name="title">
+     <string>Ansicht</string>
+    </property>
+    <widget class="QMenu" name="menuTabellen">
+     <property name="title">
+      <string>Tabellen</string>
+     </property>
+     <addaction name="actionSegmente"/>
+     <addaction name="actionTransponder"/>
+     <addaction name="actionLaserscanner_2"/>
+    </widget>
+    <addaction name="menuTabellen"/>
+    <addaction name="actionSegment"/>
+   </widget>
+   <widget class="QMenu" name="menuLogs">
+    <property name="title">
+     <string>Logs</string>
+    </property>
+    <widget class="QMenu" name="menuViewer">
+     <property name="title">
+      <string>Viewer</string>
+     </property>
+     <addaction name="actionLaserscanner"/>
+     <addaction name="actionBahnregler"/>
+    </widget>
+    <addaction name="menuViewer"/>
+    <addaction name="actionKonsistenzcheck"/>
+   </widget>
+   <widget class="QMenu" name="menuHilfe">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHilfe_zu_den_Tools"/>
+    <addaction name="action_ber_das_NavTool"/>
+   </widget>
+   <addaction name="menuDatei"/>
+   <addaction name="menuAnsicht"/>
+   <addaction name="menuLogs"/>
+   <addaction name="menuHilfe"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_ffnen">
+   <property name="text">
+    <string>Öffnen</string>
+   </property>
+  </action>
+  <action name="actionBeenden">
+   <property name="text">
+    <string>Beenden</string>
+   </property>
+  </action>
+  <action name="actionHilfe_zu_den_Tools">
+   <property name="text">
+    <string>Hilfe zu den Tools</string>
+   </property>
+  </action>
+  <action name="action_ber_das_NavTool">
+   <property name="text">
+    <string>Über das NavTool</string>
+   </property>
+  </action>
+  <action name="actionLaserscanner">
+   <property name="text">
+    <string>Laserscanner</string>
+   </property>
+  </action>
+  <action name="actionBahnregler">
+   <property name="text">
+    <string>Bahnregler</string>
+   </property>
+  </action>
+  <action name="actionKonsistenzcheck">
+   <property name="text">
+    <string>Konsistenzcheck</string>
+   </property>
+   <property name="toolTip">
+    <string notr="true">Mit diesem Konsistenzcheck werden Reihen aus den CSV Dateien herausgefiltert, die nicht der korrekten Reihenlänge entsprechen.</string>
+   </property>
+  </action>
+  <action name="actionSegment">
+   <property name="text">
+    <string>Segmente</string>
+   </property>
+  </action>
+  <action name="actionSegmente">
+   <property name="text">
+    <string>Segmente</string>
+   </property>
+  </action>
+  <action name="actionLaserscanner_2">
+   <property name="text">
+    <string>Lasermarken</string>
+   </property>
+  </action>
+  <action name="actionTransponder">
+   <property name="text">
+    <string>Transponder</string>
+   </property>
+  </action>
+  <action name="actionSpeichern">
+   <property name="text">
+    <string>Speichern</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionBeenden</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>98</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
