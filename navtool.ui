@@ -73,6 +73,8 @@
     </property>
     <addaction name="actionHilfe_zu_den_Tools"/>
     <addaction name="action_ber_das_NavTool"/>
+    <addaction name="action_ber_den_Autor"/>
+    <addaction name="action_ber_QT"/>
    </widget>
    <addaction name="menuDatei"/>
    <addaction name="menuAnsicht"/>
@@ -81,18 +83,39 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="action_ffnen">
+   <property name="icon">
+    <iconset resource="navrc.qrc">
+     <normaloff>:/Test1/Downloads/icons/folder.png</normaloff>:/Test1/Downloads/icons/folder.png</iconset>
+   </property>
    <property name="text">
     <string>Öffnen</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionBeenden">
+   <property name="icon">
+    <iconset resource="navrc.qrc">
+     <normaloff>:/Test1/Downloads/icons/cancel.png</normaloff>:/Test1/Downloads/icons/cancel.png</iconset>
+   </property>
    <property name="text">
     <string>Beenden</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
   <action name="actionHilfe_zu_den_Tools">
+   <property name="icon">
+    <iconset resource="navrc.qrc">
+     <normaloff>:/Test1/Downloads/icons/help.png</normaloff>:/Test1/Downloads/icons/help.png</iconset>
+   </property>
    <property name="text">
     <string>Hilfe zu den Tools</string>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
    </property>
   </action>
   <action name="action_ber_das_NavTool">
@@ -143,8 +166,20 @@
     <string>Speichern</string>
    </property>
   </action>
+  <action name="action_ber_den_Autor">
+   <property name="text">
+    <string>Über den Autor</string>
+   </property>
+  </action>
+  <action name="action_ber_QT">
+   <property name="text">
+    <string>Über QT</string>
+   </property>
+  </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="navrc.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>actionBeenden</sender>
