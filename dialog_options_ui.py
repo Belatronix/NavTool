@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'dialog_options.ui'
 #
-# Created: Sun Nov 30 23:26:56 2014
+# Created: Sun Mar  1 11:41:37 2015
 #      by: pyside-uic 0.2.15 running on PySide 1.2.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -65,7 +65,8 @@ class Ui_Dialog(object):
         self.horizontalLayout_2.addWidget(self.lineEdit)
         self.verticalLayout.addLayout(self.horizontalLayout_2)
         self.buttonBox = QtGui.QDialogButtonBox(Dialog)
-        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ok)
+        self.buttonBox.setOrientation(QtCore.Qt.Horizontal)
+        self.buttonBox.setStandardButtons(QtGui.QDialogButtonBox.Cancel|QtGui.QDialogButtonBox.Ignore|QtGui.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
         self.verticalLayout.addWidget(self.buttonBox)
         self.gridLayout.addLayout(self.verticalLayout, 1, 0, 1, 1)

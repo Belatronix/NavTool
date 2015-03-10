@@ -65,7 +65,6 @@
      <addaction name="actionBahnregler"/>
     </widget>
     <addaction name="menuViewer"/>
-    <addaction name="actionKonsistenzcheck"/>
    </widget>
    <widget class="QMenu" name="menuHilfe">
     <property name="title">

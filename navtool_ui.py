@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'navtool.ui'
 #
-# Created: Mon Dec  1 00:39:50 2014
+# Created: Tue Mar  3 21:52:32 2015
 #      by: pyside-uic 0.2.15 running on PySide 1.2.1
 #
 # WARNING! All changes made in this file will be lost!
@@ -90,7 +90,6 @@ class Ui_MainWindow(object):
         self.menuViewer.addAction(self.actionLaserscanner)
         self.menuViewer.addAction(self.actionBahnregler)
         self.menuLogs.addAction(self.menuViewer.menuAction())
-        self.menuLogs.addAction(self.actionKonsistenzcheck)
         self.menuHilfe.addAction(self.actionHilfe_zu_den_Tools)
         self.menuHilfe.addAction(self.action_ber_das_NavTool)
         self.menuHilfe.addAction(self.action_ber_den_Autor)
