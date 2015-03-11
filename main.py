@@ -11,7 +11,7 @@ from navtool_ui import Ui_MainWindow
 from dialog_options_ui import Ui_Dialog
 
 
-__version__ = '0.0.2'
+__version__ = '0.0.3'
 
 
 class MyApplication(QMainWindow, Ui_MainWindow):
