@@ -2,16 +2,20 @@ import sys
 import platform
 import PySide
 import numpy as np
-
+import matplotlib
+#matplotlib.use('Qt4Agg')
 from PySide import QtGui
 
 from PySide.QtGui import QApplication, QMainWindow, QMessageBox
+import matplotlib.backends.backend_qt4agg
+from matplotlib.figure import Figure
 
 from navtool_ui import Ui_MainWindow
 from dialog_options_ui import Ui_Dialog
 
 
 __version__ = '0.0.3'
+__progname__ = 'NavTool'
 
 
 class MyApplication(QMainWindow, Ui_MainWindow):
@@ -29,14 +33,14 @@ class MyApplication(QMainWindow, Ui_MainWindow):
 
     def about(self):
         QMessageBox.about(self, "About the Program",
-                          ('<b>About this Program Version %s</b>\n'
+                          ('<b>%s - Ver.%s</b>\n'
                            '            <p align="center">Copyright 2015 Axel Beierlein.\n'
                            '            <p align="center">All rights reserved in accordance with\n'
                            '            GPL v2 or later - NO WARRANTIES!\n'
                            '            <p align="center">This application can be used for\n'
                            '            displaying OS and platform details.\n'
                            '            <p align="center">Python %s -  PySide version %s - Qt version %s on %s') % (
-                              __version__, platform.python_version(), PySide.__version__, PySide.QtCore.__version__,
+                              __progname__, __version__, platform.python_version(), PySide.__version__, PySide.QtCore.__version__,
                               platform.system()))
 
     def text(self):
