@@ -1,15 +1,12 @@
 import sys
 import platform
+
 import PySide
-import numpy as np
-
 from PySide import QtGui
-
 from PySide.QtGui import QApplication, QMainWindow, QMessageBox
 
 from navtool_ui import Ui_MainWindow
 from dialog_options_ui import Ui_Dialog
-
 
 __version__ = '0.0.3'
 
@@ -40,7 +37,7 @@ class MyApplication(QMainWindow, Ui_MainWindow):
                               platform.system()))
 
     def text(self):
-        QMessageBox.warning(self, "Waning", "Oh no!\nThere is something going wrong!")
+        QMessageBox.warning(self, "Warning", "Oh no!\nThere is something going wrong!")
 
     def openfile(self):
         try:
