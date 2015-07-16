@@ -4,7 +4,7 @@ import PySide
 import numpy as np
 import matplotlib
 #matplotlib.use('Qt4Agg')
-from PySide import QtGui
+import PySide
 
 from PySide.QtGui import QApplication, QMainWindow, QMessageBox
 import matplotlib.backends.backend_qt4agg
