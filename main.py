@@ -1,18 +1,10 @@
-import sys
 import platform
-import PySide
-import numpy as np
-import matplotlib
-#matplotlib.use('Qt4Agg')
-import PySide
+import sys
 
-from PySide.QtGui import QApplication, QMainWindow, QMessageBox
-import matplotlib.backends.backend_qt4agg
-from matplotlib.figure import Figure
-
-from navtool_ui import Ui_MainWindow
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox, QDialog, QFileDialog, QDialogButtonBox
+from PyQt5.QtCore import *
 from dialog_options_ui import Ui_Dialog
-
+from navtool_ui import Ui_MainWindow
 
 __version__ = '0.0.3'
 __progname__ = 'NavTool'
@@ -39,8 +31,8 @@ class MyApplication(QMainWindow, Ui_MainWindow):
                            '            GPL v2 or later - NO WARRANTIES!\n'
                            '            <p align="center">This application can be used for\n'
                            '            displaying OS and platform details.\n'
-                           '            <p align="center">Python %s -  PySide version %s - Qt version %s on %s') % (
-                              __progname__, __version__, platform.python_version(), PySide.__version__, PySide.QtCore.__version__,
+                           '            <p align="center">Python %s -  PyQt5 version %s - Qt version %s on %s') % (
+                              __progname__, __version__, platform.python_version(), PYQT_VERSION, QT_VERSION,
                               platform.system()))
 
     def text(self):
@@ -48,18 +40,18 @@ class MyApplication(QMainWindow, Ui_MainWindow):
 
     def openfile(self):
         try:
-            fname, _ = QtGui.QFileDialog.getOpenFileName(self, 'Open Log File', '/home')
+            fname, _ = QFileDialog.getOpenFileName(self, 'Open Log File', '/home')
         except IOError:
             QMessageBox.warning(self, "Error" "While opening the File")
 
     def opendialog(self, text=""):
-        dialog = QtGui.QDialog(self)
+        dialog = QDialog(self)
         dialogui = Ui_Dialog()
         dialogui.setupUi(dialog)
         dialog.show()
         dialogui.label.setText(text)
-        dialogui.buttonBox.button(QtGui.QDialogButtonBox.Cancel).clicked.connect(dialog.reject)
-        dialogui.buttonBox.button(QtGui.QDialogButtonBox.Ok).clicked.connect(self.about)
+        dialogui.buttonBox.button(QDialogButtonBox.Cancel).clicked.connect(dialog.reject)
+        dialogui.buttonBox.button(QDialogButtonBox.Ok).clicked.connect(self.about)
 
 
 if __name__ == "__main__":

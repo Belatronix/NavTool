@@ -1,7 +1,7 @@
 <RCC>
   <qresource prefix="Test1">
-    <file>../../Downloads/icons/help.png</file>
-    <file>../../Downloads/icons/cancel.png</file>
-    <file>../../Downloads/icons/folder.png</file>
+    <file>../../icons/help.png</file>
+    <file>../../icons/cancel.png</file>
+    <file>../../icons/folder.png</file>
   </qresource>
 </RCC>
